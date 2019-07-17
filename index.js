@@ -12,11 +12,11 @@ import {AppRegistry} from 'react-native';
 // import MyFixDimension from './my_components/MyFixDimension';
 // import MyFlexDimension from './my_components/MyFlexDimension';
 // import MyTextInput from './my_components/MyTextInput';
-import MyButton from './my_components/MyButton';
+import MyTouchable from './my_components/MyTouchable';
 import {name as appName} from './app.json';
 
 // AppRegistry.registerComponent(appName, () => App);
 // AppRegistry.registerComponent(appName, () => FirstComponent);
 // AppRegistry.registerComponent(appName, () => MultipleGreetings);
 // AppRegistry.registerComponent(appName, () => TextBlink);
-AppRegistry.registerComponent(appName, () => MyButton);
+AppRegistry.registerComponent(appName, () => MyTouchable);
