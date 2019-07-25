@@ -14,7 +14,8 @@ import {AppRegistry} from 'react-native';
 // import MyTextInput from './my_components/MyTextInput';
 // import MyTouchable from './my_components/MyTouchable';
 // import MyVerticalScrollView from './my_components/MyVerticalScrollView';
-import MyHorizontalScrollView from './my_components/MyHorizontalScrollView';
+// import MyHorizontalScrollView from './my_components/MyHorizontalScrollView';
+import MyViewPagerAndroid from './my_components/MyViewPagerAndroid';
 import {name as appName} from './app.json';
 
 // AppRegistry.registerComponent(appName, () => App);
@@ -22,4 +23,4 @@ import {name as appName} from './app.json';
 // AppRegistry.registerComponent(appName, () => MultipleGreetings);
 // AppRegistry.registerComponent(appName, () => TextBlink);
 // AppRegistry.registerComponent(appName, () => MyTouchable);
-AppRegistry.registerComponent(appName, () => MyHorizontalScrollView);
+AppRegistry.registerComponent(appName, () => MyViewPagerAndroid);

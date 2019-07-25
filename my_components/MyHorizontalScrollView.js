@@ -43,6 +43,8 @@ export default class MyHorizontalScrollView extends Component {
                 let logData = `Scrolled to x = ${event.nativeEvent.contentOffset.x}, y=${event.nativeEvent.contentOffset.y}`
                 console.log(logData)
             }}
+            // Sau 10mili seconds sẽ update cái scroll 1 lần
+            scrollEventThrottle={10}
             >
 
                 <View style={{
