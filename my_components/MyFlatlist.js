@@ -7,10 +7,23 @@ import { AppRegistry,
     ViewPagerAndroid,
     StyleSheet,
     Alert,
-    View } from 'react-native';
+    View,
+    Platform,
+    TouchableHighlight } from 'react-native';
 // Swipeout này cần phải tải bằng yarn hoặc npm
+// yarn add react-native-modalbox
+// yarn add react-native-swipeout
+// Sau đó file package.json sẽ được thêm:
+// "dependencies": {
+//     "react": "16.8.6",
+//     "react-native": "0.60.3",
+//     "react-native-button": "^2.4.0",
+//     "react-native-modalbox": "^1.7.1",
+//     "react-native-swipeout": "^2.3.6"
+//   }
 import Swipeout from 'react-native-swipeout';
 import flatListData123 from '../mydata/myFlatListData';
+
 
 
 // Đây là cái layout của từng item trong List
@@ -112,7 +125,6 @@ class MyFlatListItem extends Component {
                     {/* Cái View này là cái đường gạch ngăn cách các item */}
                     <View style={{height:1,backgroundColor:'red'}}></View>
                 </View>
-
             </Swipeout>
         );
     }
@@ -142,9 +154,35 @@ export default class MyFlatlist extends Component {
             }
         })
     }
+    myOnPressAdd(){
+        alert("Ban dang add item")
+    }
     render() {
         return (
-            <View style={{flex: 1, marginTop:20}}>
+            // Để kiểm tra xem Platform là IOS hay Android
+            <View style={{flex: 1, marginTop:Platform.OS === 'ios' ? 20 : 0}}>
+
+                <View style={{
+                    backgroundColor:'tomato',
+                    height:64,
+                    flexDirection:'row',
+                    justifyContent:'flex-end',
+                    alignItems:'center'
+                }}>
+                    <TouchableHighlight
+                        style={{marginRight:10}}
+                        underlayColor="green"
+                        onPress={this.myOnPressAdd}>
+                        <Image
+                            style={{width: 35, height:35}}
+                            source={require('../images/btn_add.png')}
+                            >
+                        </Image>
+
+                    </TouchableHighlight>
+
+                </View>
+
                 <FlatList
                     data={flatListData123}
                     // 2 tham số item và index là do callback của cái renderItem mặc định trả về.
