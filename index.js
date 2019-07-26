@@ -15,7 +15,8 @@ import {AppRegistry} from 'react-native';
 // import MyTouchable from './my_components/MyTouchable';
 // import MyVerticalScrollView from './my_components/MyVerticalScrollView';
 // import MyHorizontalScrollView from './my_components/MyHorizontalScrollView';
-import MyViewPagerAndroid from './my_components/MyViewPagerAndroid';
+// import MyViewPagerAndroid from './my_components/MyViewPagerAndroid';
+import MyFlatlist from './my_components/MyFlatlist';
 import {name as appName} from './app.json';
 
 // AppRegistry.registerComponent(appName, () => App);
@@ -23,4 +24,4 @@ import {name as appName} from './app.json';
 // AppRegistry.registerComponent(appName, () => MultipleGreetings);
 // AppRegistry.registerComponent(appName, () => TextBlink);
 // AppRegistry.registerComponent(appName, () => MyTouchable);
-AppRegistry.registerComponent(appName, () => MyViewPagerAndroid);
+AppRegistry.registerComponent(appName, () => MyFlatlist);
